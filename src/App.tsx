@@ -21,6 +21,8 @@ import CollapsibleContent from './pages/more/CollapsibleContent';
 import Tooltips from './pages/more/Tooltips';
 import Popups from './pages/more/Popups';
 import Links from './pages/more/Links';
+import CssProperties from './pages/more/CssProperties';
+import IFrames from './pages/more/IFrames';
 
 // Route Guard
 import ProtectedRoute from './routes/ProtectedRoute';
@@ -63,6 +65,8 @@ function App() {
             <Route path="/more/tooltips" element={<Tooltips />} />
             <Route path="/more/popups" element={<Popups />} />
             <Route path="/more/links" element={<Links />} />
+            <Route path="/more/css-properties" element={<CssProperties />} />
+            <Route path="/more/iframes" element={<IFrames />} />
           </Route>
         </Route>
         
