@@ -9,7 +9,18 @@ import {
   Search,
   PlusCircle,
   Menu,
-  MoreHorizontal
+  MoreHorizontal,
+  Layers,
+  List,
+  Type,
+  Columns,
+  Image,
+  Sliders,
+  HelpCircle,
+  MessageSquare,
+  Link as LinkIcon,
+  Palette,
+  Monitor
 } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
 
@@ -155,8 +166,85 @@ const Sidebar: React.FC = () => {
           <SidebarGroup 
             icon={<MoreHorizontal />} 
             label="More"
+            defaultOpen={location.pathname.includes('/more')}
           >
-            {/* Add more items as needed */}
+            <SidebarItem 
+              to="/more/multiple-tabs" 
+              icon={<Layers size={18} />} 
+              label="Multiple Tabs" 
+              active={isActive('/more/multiple-tabs')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/menu" 
+              icon={<List size={18} />} 
+              label="Menu" 
+              active={isActive('/more/menu')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/autocomplete" 
+              icon={<Type size={18} />} 
+              label="Autocomplete" 
+              active={isActive('/more/autocomplete')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/collapsible" 
+              icon={<Columns size={18} />} 
+              label="Collapsible Content" 
+              active={isActive('/more/collapsible')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/images" 
+              icon={<Image size={18} />} 
+              label="Images" 
+              active={isActive('/more/images')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/slider" 
+              icon={<Sliders size={18} />} 
+              label="Slider" 
+              active={isActive('/more/slider')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/tooltips" 
+              icon={<HelpCircle size={18} />} 
+              label="Tooltips" 
+              active={isActive('/more/tooltips')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/popups" 
+              icon={<MessageSquare size={18} />} 
+              label="Popups" 
+              active={isActive('/more/popups')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/links" 
+              icon={<LinkIcon size={18} />} 
+              label="Links" 
+              active={isActive('/more/links')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/css-properties" 
+              icon={<Palette size={18} />} 
+              label="CSS Properties" 
+              active={isActive('/more/css-properties')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <SidebarItem 
+              to="/more/iframes" 
+              icon={<Monitor size={18} />} 
+              label="iFrames" 
+              active={isActive('/more/iframes')}
+              onClick={() => setMobileMenuOpen(false)}
+            />
           </SidebarGroup>
           
           <SidebarGroup 
